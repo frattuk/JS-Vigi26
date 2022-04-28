@@ -87,23 +87,60 @@ const number = 2;
 
 // }
 
-let peopleCount = 4;
+// let peopleCount = 4;
 
-if (peopleCount < 1) {
-    console.log("ne grupe");
+// if (peopleCount < 1) {
+//     console.log("ne grupe");
+// }
+// if (peopleCount == 1) {
+//     console.log("solo");
+// }
+// if (peopleCount == 2) {
+//     console.log("duetas");
+// }
+// if (peopleCount == 3) {
+//     console.log("trio");
+// }
+// if (peopleCount == 4) {
+//     console.log("kvartetas");
+// }
+// if (peopleCount > 4) {
+//     console.log("didele grupe");
+// }
+
+const legalAge = 20;
+let clientAge = 23;
+
+if (clientAge>=legalAge) {
+    console.log("legal age")
 }
-if (peopleCount == 1) {
-    console.log("solo");
+if (clientAge < legalAge) {
+    console.log("Too young")
 }
-if (peopleCount == 2) {
-    console.log("duetas");
+
+const myName = "Liudmila";
+
+if (myName.length >=6)
+console.log("ilgas vardas");
+
+let age = 18;
+
+if (age >100 || age < 0) {
+console.log("invalid age")
 }
-if (peopleCount == 3) {
-    console.log("trio");
+else if (age <18) {
+    console.log("Child")
 }
-if (peopleCount == 4) {
-    console.log("kvartetas");
+else {
+    console.log("adult")
 }
-if (peopleCount > 4) {
-    console.log("didele grupe");
+
+const car="BMW";
+
+
+if (car ==="VW"||car ==="Audi"|| car ===  "Bentley"|| car==="Bugatti"||car=== "Lamborghini"||car=== "Porsche") {
+    console.log("VW Group")
+}
+if (car=== "BMW"|| car=== "Mini"||car=== "Rolls-Royce") {
+    console.log("BMW Group")
 }
