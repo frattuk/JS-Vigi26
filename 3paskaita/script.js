@@ -26,6 +26,50 @@
 //         break;
 // }
 
+const car = "bmw";
+
+switch (car) {
+    case "vw":
+    case "audi":
+    case "bentley":
+    case "bugatti":
+        console.log("VW group");
+        break;
+    case "bmw":
+    case "mini":
+    case "rolls":
+        console.log("BMW Group")
+        break;
+
+
+    default:
+        break;
+}
+
+userInput= "Obuolys";
+
+switch (userInput) {
+    case "Kriause":
+    case "Slyva":
+    case "Obuolys":
+    case "Braske":
+    case "Granatas":
+        console.log("vaisius")
+        break;
+    case "Agurkas":
+    case "Bulve":
+    case "Pomidoras":
+    case "Rope":
+    case "morka":
+        console.log("Darzove")
+        break
+
+    default:
+        break;
+}
+
+
+
 
 // if (number === 1) {
 
@@ -74,13 +118,31 @@
 // console.log (weather);
 // console.log(resultTernary);
 
+
+
+
+
 // naudoti template string tik tada kai dedame kintamuosius i vidu.
 
 const myName = "Liudmila";
+
+const nameLength = myName < 5 ? "short name" : "long name";
+console.log(nameLength);
+
+
 const surname = "Liu";
 
-console.log(myName + " " + surname);
-console.log(`${myName} ${surname}`);
+// console.log(myName + " " + surname);
+// console.log(`${myName} ${surname}`);
 
 const fullNameOld = myName + " " + surname;
 const fullNameNew = `${myName} ${surname}`;
+
+ const clientAge = 21;
+ const legalAge = 20;
+
+ const drive = clientAge > legalAge ? "Can drive" : "Cant drive";
+console.log(drive);
+
+const phone = "iPhone";
+const isIphoneUser = phone ==="iPhone";
