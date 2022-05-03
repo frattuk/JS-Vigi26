@@ -146,3 +146,15 @@ console.log(drive);
 
 const phone = "iPhone";
 const isIphoneUser = phone ==="iPhone";
+
+for (let i = 0; i<10; i++) {
+    console.log("Liu")
+}
+
+const name = "Liu";
+const count = 10;
+for (let i=0; i<count; i++) {
+    console.log(name);
+}
+
+
