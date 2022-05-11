@@ -108,25 +108,30 @@
 
 //     console.log(substraction(10, 4))
 
-const nameButton = document.getElementById("name");
-nameButton.addEventListener("click", clickButtonListener);
+// const nameButton = document.getElementById("name");
+// nameButton.addEventListener("click", clickButtonListener);
 
-function clickButtonListener() {
-alert("Rokas");
-}
+// function clickButtonListener() {
+// alert("Rokas");
+// }
 
-const backgroundButton = document.getElementById("background");
-backgroundButton.addEventListener("click", onClickBackgroundButton);
+// const backgroundButton = document.getElementById("background");
+// backgroundButton.addEventListener("click", onClickBackgroundButton);
 
-function onClickBackgroundButton() {
-document.body.style.backgroundColor = "blue";
-}
+// function onClickBackgroundButton() {
+// document.body.style.backgroundColor = "blue";
+// }
 
-const loginButton = document.getElementById("login");
-loginButton.addEventListener("click", loginHandler);
+// const loginButton = document.getElementById("login");
+// loginButton.addEventListener("click", loginHandler);
 
-function loginHandler() {
-const h1Node = document.querySelector("h1");
-h1Node.textContent = "Hello, Rokas!";
-loginButton.textContent = "Log out";
-}
+// function loginHandler() {
+// const h1Node = document.querySelector("h1");
+// h1Node.textContent = "Hello, Rokas!";
+// loginButton.textContent = "Log out";
+// }
+
+function alertName(name) {
+    alert(name);
+  }
+  alertName('John');
