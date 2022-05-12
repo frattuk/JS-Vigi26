@@ -1,17 +1,17 @@
-// const painter = document.querySelector("input[name=painter]");
+const painter = document.querySelector("input[name=painter]");
 
-// painter.addEventListener("input", (event) => {
-// const value = event.target.value;
-// const result = document.getElementById("painter-result");
+painter.addEventListener("input", (event) => {
+const value = event.target.value;
+const result = document.getElementById("painter-result");
 
-// let paintedI = "";
+let paintedI = "";
 
-// for (let i = 0; i < value; i++) {
-// paintedI += "<div>I</div>";
-// }
+for (let i = 0; i < value; i++) {
+paintedI += "<div>I</div>";
+}
 
-// result.innerHTML = paintedI;
-// });
+result.innerHTML = paintedI;
+});
 
 const price = document.querySelector("input[name='price']");
 const totalResult = document.querySelector("#sum-result");
