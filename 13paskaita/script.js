@@ -59,7 +59,10 @@ const result = dog.repeat(5) // pakartoja kiek reikia
 // console.log(result)
 
 const splitted = sentence.split(''); // sudeda visus zodzius i atskirai i masyva
-console.log(splitted); 
+// console.log(splitted); 
+
+const milkPrice = 1.95;
+console.log(milkPrice.toFixed(2));
 
 
 
