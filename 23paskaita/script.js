@@ -128,7 +128,12 @@ fetch("https://jsonplaceholder.typicode.com/comments")
     console.error(error, ": Failed to load comments");
 });
 
+fetch("https://randomuser.me/api")
+    .then(response => response.json())
+    .then(json => console.log(json))
+    
 
+// fetch(url))
 
 // const url = "https://randomuser.me/api/name"
 // fetch(url)
@@ -139,9 +144,9 @@ const userCard = (user) => {
     img.alt = `${user.name.first} profile picture`;
     img.style.width='300px';
     const intro = document.createElement('h3');
-    intro.textContent = `${user.name.first} ${user.name.last} ${user.dob.age}`;
+    intro.textContent = `${user.name.first} ${user.name.last} ${user.dob.age} years old`;
     intro.style.color='lightgreen';
-
+    
 
     const contacts = document.createElement('h4');
     contacts.textContent = user.email;
@@ -166,4 +171,26 @@ const fetchRandomUser = async () => {
   
   fetchRandomUser();
   
+
+  const getRandomUser = async () => {
+    try {
+      const resp = fetch('https://randomuser.me/api/');
+      const response = await resp.json();     
+      console.log(response);
+    } catch(error) {
+      console.error(error);
+    }
+};
+
+
+
+fetch('https://randomuser.me/api/')
+  .then(resp => resp.json())
+  .then((response) => {
+      console.log(response);
+  }).catch((error) => {
+      console.error(error);
+  });
+
+
 
