@@ -7,10 +7,20 @@ const renderTodo = (todo) => {
 
     todoEl.className ='todo';
     todoTitle.className = 'todo-title';
-    todoStatus.className = completed ? 'todo-status done' : 'todo-status' ;
+    todoStatus.className = completed ? 'todo-status done' : 'todo-status';
+    todoTitle.className = completed ? 'todo-title done' : 'todo-title' ;
 
 
     todoTitle.textContent = title;
+
+    todoStatus.addEventListener('click', () => {
+        
+        todoStatus.classList.toggle('done');
+        todoTitle.classList.toggle('done');
+        todoStatus.completed = !todoStatus.completed;
+        
+        console.log(completed);
+    })
     
     todoEl.append(todoTitle, todoStatus);
     document.querySelector('.todo-container').prepend(todoEl);
@@ -36,6 +46,7 @@ fetch('https://jsonplaceholder.typicode.com/todos')
     const todoText = document.querySelector('input[name="todo-text')
     
     const newTodo = {title: todoText.value, completed: false};
+
     const params = {
         method: 'POST',
         body: JSON.stringify(newTodo),
