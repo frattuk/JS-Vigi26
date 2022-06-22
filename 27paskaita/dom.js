@@ -88,7 +88,126 @@
 //   event.target.style.fontSize = "30px";
 // });
 
-document.getElementById("name").addEventListener("input", (event) => {
-  const name = event.target.value;
-  document.body.style.backgroundColor = name.length < 3 ? "red" : "green";
+// document.getElementById("name").addEventListener("input", (event) => {
+//   const name = event.target.value;
+//   document.body.style.backgroundColor = name.length < 3 ? "red" : "green";
+// });
+
+// kartojimas pratesimas
+
+// const myButton = document.getElementById("my-button");
+
+// let count = 0;
+
+// myButton.addEventListener("click", (event) => {
+//   count++;
+//   const countEl = document.getElementById("count");
+//   countEl.textContent = count;
+
+//   console.log(`Button pressed: ${count} times`);
+//   const resultEl = document.getElementById("result");
+
+//   if (count === 5) {
+//     resultEl.textContent = "You just hit button five times";
+//   } else {
+//     resultEl.textContent = "";
+//   }
+// });
+
+// function handleClick(event) {
+//   count++;
+//   const countEl = document.getElementById("count");
+//   countEl.textContent = count;
+
+//   console.log(`Button pressed: ${count} times`);
+//   const resultEl = document.getElementById("result");
+
+//   if (count === 5) {
+//     resultEl.textContent = "You just hit button five times";
+//   } else {
+//     resultEl.textContent = "";
+//   }
+// }
+
+// myButton.addEventListener("click", handleClick);
+
+// const button = document.getElementById("show");
+// button.addEventListener("click", (event) => {
+//   const myName = document.querySelector("p");
+//   myName.textContent = "Liudmila";
+//   myName.style.color = "violet";
+// });
+
+// const plusButton = document.getElementById("plus");
+
+// let number = 0;
+
+// plusButton.addEventListener("click", (event) => {
+//   number += 500;
+//   const numberEl = document.getElementById("number");
+//   numberEl.textContent = number;
+// });
+
+// const minusButton = document.getElementById("minus");
+
+// minusButton.addEventListener("click", (event) => {
+//   number -= 500;
+//   const numberElement = document.getElementById("number");
+//   numberElement.textContent = number;
+// });
+// const resetButton = document.getElementById("reset");
+// resetButton.addEventListener("click", () => {
+//   numberEl = 0;
+//   document.getElementById("number").textContent = numberEl;
+// });
+
+// const registerForm = document.getElementById("register");
+
+// registerForm.addEventListener("submit", (event) => {
+//   event.preventDefault();
+
+//   const username = document.querySelector("input[name='username']");
+//   const email = document.querySelector("input[name='email']");
+//   const age = document.querySelector("input[name='age']");
+//   const password = document.querySelector("input[name='password']");
+
+//   const result = document.createElement("h2");
+//   result.textContent = `${username.value}, ${email.value}, ${age.value}, ${password.value}`;
+//   document.body.append(result);
+// });
+
+const regForm = document.getElementById("register-form");
+regForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const username = document.querySelector("input[name='username']");
+  const surname = document.querySelector("input[name='surname']");
+  const age = document.querySelector("input[name='age']");
+
+  const result = document.createElement("h2");
+  if (age.value < 18) {
+    result.textContent = `${username.value} ${surname.value} yra nepilnametis`;
+  } else {
+    result.textContent = `${username.value} ${surname.value} yra pilnametis`;
+  }
+  document.body.append(result);
 });
+
+// const registrationForm = document.getElementById("register-form");
+
+// registrationForm.addEventListener("submit", (event) => {
+//   event.preventDefault();
+
+//   const username = document.querySelector("input[name='username']");
+//   const surname = document.querySelector("input[name='surname']");
+//   const age = document.querySelector("input[name='age']");
+
+//   const resultAge = document.createElement("h2");
+
+//   if (age.value < 18) {
+//     resultAge.textContent = `${username.value} ${surname.value} is child`;
+//   } else {
+//     resultAge.textContent = `${username.value} ${surname.value} is adult`;
+//   }
+
+//   document.body.append(resultAge);
+// });
