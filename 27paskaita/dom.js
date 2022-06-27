@@ -176,38 +176,125 @@
 //   document.body.append(result);
 // });
 
-const regForm = document.getElementById("register-form");
-regForm.addEventListener("submit", (event) => {
-  event.preventDefault();
-  const username = document.querySelector("input[name='username']");
-  const surname = document.querySelector("input[name='surname']");
-  const age = document.querySelector("input[name='age']");
-
-  const result = document.createElement("h2");
-  if (age.value < 18) {
-    result.textContent = `${username.value} ${surname.value} yra nepilnametis`;
-  } else {
-    result.textContent = `${username.value} ${surname.value} yra pilnametis`;
-  }
-  document.body.append(result);
-});
-
-// const registrationForm = document.getElementById("register-form");
-
-// registrationForm.addEventListener("submit", (event) => {
+// const regForm = document.getElementById("register-form");
+// regForm.addEventListener("submit", (event) => {
 //   event.preventDefault();
-
 //   const username = document.querySelector("input[name='username']");
 //   const surname = document.querySelector("input[name='surname']");
 //   const age = document.querySelector("input[name='age']");
 
-//   const resultAge = document.createElement("h2");
-
+//   const result = document.createElement("h2");
 //   if (age.value < 18) {
-//     resultAge.textContent = `${username.value} ${surname.value} is child`;
+//     result.textContent = `${username.value} ${surname.value} yra nepilnametis`;
 //   } else {
-//     resultAge.textContent = `${username.value} ${surname.value} is adult`;
+//     result.textContent = `${username.value} ${surname.value} yra pilnametis`;
 //   }
-
-//   document.body.append(resultAge);
+//   document.body.append(result);
 // });
+
+// nauja paskaita, KARTOJIMAS masyvai, funkcijos, atvaizdavimai
+
+// 'rokas' => ["r", "o", "k", "a", "s"]
+// array.length
+// first item - [0]
+// last item - [array.length - 1]
+
+// array.forEach(callback)
+// callback -(item, index) => {})
+// turi return
+
+// const names = ["Rokas", "Tomas", "Giedrius", "Martyna"];
+
+// function addNewStudent(studentName) {
+//   names.push(studentName);
+// }
+
+// function removeStudent() {
+//   names.pop();
+// }
+// console.log(names);
+// addNewStudent("Antanas");
+// console.log(names);
+// removeStudent();
+// console.log(names);
+
+// array.push() stumia i gala\
+// array.pop() ismeta is galo
+// array.unshift() istumia i prieki
+// array.shift() ismeta is priekio
+
+// const colors = ["red", "blue", "green", "white", "black", "yellow", "purple"];
+
+// function removeColors(colorArray) {
+//   colorArray.pop(); // red blue green white black yellow
+//   colorArray.shift(); // blue green white black yellow
+//   colorArray.shift(); // green white black yellow
+//   colorArray.shift(); // white black yellow
+//   colorArray.shift(); // black yellow
+//   colorArray.shift(); // yellow
+//   colorArray.unshift("green"); // green yellow
+// }
+
+// removeColors(colors);
+
+// console.log(colors);
+
+// function addColors(colorArray) {
+//   colorArray.unshift("blue");
+//   colorArray.unshift("red");
+//   colorArray.pop();
+//   colorArray.push("white");
+//   colorArray.push("black");
+//   colorArray.push("yellow");
+//   colorArray.push("purple");
+// }
+
+// addColors(colors);
+// console.log(colors);
+
+// // apversti masyva
+
+// function reverseArray(array) {
+//   array.reverse();
+// }
+// reverseArray(colors);
+// console.log(colors);
+
+// // atspausdinti kiekviena spalva
+
+// colors.forEach((color) => {
+//   console.log(color);
+// });
+
+// // padvigubinti spalvas
+
+// function doubleArrayItems(array) {
+//   return array.map((item) => item + item);
+// }
+// const doubleItems = doubleArrayItems(colors);
+// console.log(doubleItems);
+
+// Roko uzduotys
+
+const colors = ["red", "blue", "green", "white", "black", "yellow", "purple"];
+
+// function removeSomeColor(array) {
+//   return array.splice(2, 2);
+// }
+
+// removeSomeColor(colors);
+// console.log(colors);
+
+// function orangeColor(array) {
+//   return array.splice(4, 1, "orange");
+// }
+// orangeColor(colors);
+// console.log(colors);
+
+output = [];
+colors.forEach(function (el) {
+  if (/e/.test(el)) {
+    output.push(el);
+  }
+});
+console.log(output);
