@@ -11,7 +11,7 @@
 // const sliced = sentence.slice(-3);
 // console.log(sliced);
 
- // const numbers = [7, 8, 1, 0.50, 8, 6, 10, 20, 30, 40];
+//  const numbers = [7, 8, 1, 0.50, 8, 6, 10, 20, 30, 40];
 
 // const total = numbers.reduce((previousValue, currentValue) => {
 //     return previousValue + currentValue;
@@ -46,15 +46,14 @@
 // const sum = getMaxSubSum(arr);
 // console.log(sum)
 
-
-const friends = ['Kleika', 'Andrej', 'Lerka', 'Nafania']
-friends.sort((a, b) => b > a ? 1 : -1);
+const friends = ["Kleika", "Andrej", "Lerka", "Nafania"];
+friends.sort((a, b) => (b > a ? 1 : -1));
 
 //console.log(friends)
 
 const numbers = [5, 10, 20, 11, 12, 1, 0, 14, 25];
 
-numbers.sort ((a, b) => b-a)
+numbers.sort((a, b) => b - a);
 
 //console.log(numbers[0]);
 
@@ -65,5 +64,4 @@ const cars = ["BMW", "MCB", "VWG", "Toyota", "AUDI"];
 // console.log(cars.reduce((a, v) => v.length === 3 ? a+1 : a, 0));
 
 const numb = [5, 10, 20, 11, 12, 1, 0, 14, 25];
-console.log(numb.reduce((a, v) => a>v ? a:v))
-
+console.log(numb.reduce((a, v) => (a > v ? a : v)));
